@@ -23,13 +23,20 @@ public class PrimeCheckTest {
   @Test
   public void testPrimes() {
     /* ToDo: insert a test here */
-    assertEquals("this will fail", true, false);
+    int[] primes = { 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47}
+
+    for (int i : primes) {
+      assertEquals("Prime Test", true, PrimeCheck.isPrime(i));
+    }
   }
 
   // --------------------------------------------------------------- //
   @Test
   public void testNonPrimes() {
     /* ToDo: insert a test here */
-    assertEquals("this will fail", true, false);
+    for(int j = 4; j <= 50; j += 2 ){
+      assertEquals("Even Number Prime Check", false, PrimeCheck.isPrime(j));
+    }
+    
   }
 }
